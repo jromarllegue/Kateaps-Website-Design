@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>KaTEAps Shop - Login</title>
+  <link rel="icon" type="image/x-icon"
+    href="https://assets.api.uizard.io/api/cdn/stream/58052032-a3fe-4421-9592-9d0ccf90aa7a.png">
+  <style>
+    body {
+      margin: 0;
+      background-size: cover;
+      background-repeat: no\2D repeat;
+      background-attachment: fixed;
+      font-family: 'Verdana';
+    }
+
+    .header {
+      position: absolute;
+      top: 0;
+      width: 100%;
+      height: 60px;
+    }
+
+    .brand {
+      position: absolute;
+      display: block;
+    }
+
+    .header-options {
+      right: 0;
+      position: absolute;
+      margin-top: 14px;
+    }
+
+    .header-options a {
+      display: inline;
+      text-align: center;
+      padding: 20px;
+      font-size: 16px;
+      color: white;
+      border: none;
+      background: none;
+      text-decoration: none;
+    }
+
+
+    #welcome-text {
+      position: absolute;
+      color: white;
+      text-shadow: 2px 1px #ffff33;
+      font-size: 100px;
+      width: 50%;
+    }
+
+    .container {
+      margin: 20px 0px 0px 50%;
+      width: 50%;
+    }
+
+    .form-container {
+      background-color: rgba(40, 40, 40, .2);
+      border-radius: 2%;
+      margin: 0px 40px 0px 40px;
+      padding: 20px;
+    }
+
+    .form-container input {
+      padding-left: 10px;
+      font-size: 15px;
+      height: 40px;
+      border: 3px solid #a1722b;
+      width: 390px;
+      margin: 20px 0px 20px 0px;
+      color: gray;
+    }
+
+    #loginAccount {
+      font-size: 18px;
+      height: 50px;
+      width: 240px;
+      margin-top: 30px;
+      border: none;
+      border-bottom: 4px solid #555555;
+      background-color: #67481b;
+      color: white;
+    }
+
+    .form-container a {
+      font-size: 12px;
+      color: white;
+      text-decoration: none;
+    }
+
+    .form-container a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+
+<body align="center" background="https://i.imgur.com/zMjmQWH.png">
+  <div class="header">
+    <img class="brand" src="https://assets.api.uizard.io/api/cdn/stream/58052032-a3fe-4421-9592-9d0ccf90aa7a.png"
+      height="61px"></img>
+    <div class="header-options">
+      <a id="headHome" href="homepage.html">HOME</a>
+      <a id="headLogin" href="login.html" style="background-color: #321f01">LOG IN</a>
+      <a id="headAboutUs" href="aboutus.html">ABOUT US</a>
+    </div>
+  </div>
+  <p id="welcome-text">
+    Welcome <br> Back <br> Kateaps!
+  </p>
+  <div class="container">
+    <img src="https://assets.api.uizard.io/api/cdn/stream/58052032-a3fe-4421-9592-9d0ccf90aa7a.png" height="200px"
+      style="padding-top: 45px"> </img><br><br><br>
+
+    <div class="form-container">
+      <input type="text" id="emailLogin" onclick="clearText()">
+      <input type="text" id="passwordLogin" onclick="changeType()">
+      <br>
+      <button id="loginAccount"> LOGIN </button>
+      <br>
+      <a href="signup.html">Don't have an account yet? Sign up!</a>
+    </div>
+  </div>
+
+  <script>
+    let emailLogin = document.getElementById("emailLogin");
+    emailLogin.value = "Email or Phone Number";
+    let passwordLogin = document.getElementById("passwordLogin");
+    passwordLogin.value = "Password";
+
+    function clearText() {
+      if (emailLogin.value == "Email or Phone Number") {
+        emailLogin.value = "";
+        emailLogin.style.color = "black";
+      }
+    }
+
+    function changeType() {
+      if (passwordLogin.type == "text") {
+        passwordLogin.type = "password";
+        passwordLogin.value = "";
+        passwordLogin.style.color = "black";
+      }
+    }
+
+  </script>
+</body>
+
+</html>
