@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>KaTEAps Shop - Payment</title>
+		<link rel="icon" type="image/x-icon" href="https://i.imgur.com/ChSKUzT.png">
+		<link rel="stylesheet" type="text/css" href="menu.css"> </link>
+
+		<!-- JS JQuery Functions -->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+		<script>
+		</script>
+	</head>
+
+
+	<!-- Payment Page Body -->		
+	<body>
+
+		<!-- Payment Page Header -->		
+		<div class="header">
+			<div class="header-brand center-flex">
+				<img class="brand-img" src="https://i.imgur.com/ChSKUzT.png"></img>
+				<label class="brand-label">KATEAPS</label>
+			</div>
+			<div class="header-options center-flex">
+		 		<a href="home.html">HOME</a> 
+		 		<a href="categories.html">MENU</a> 
+		 		<a href="cart.html">YOUR CART</a> 
+				<a href="https://asuncionmarykathar.wixsite.com/kateaps/about-us">ABOUT US</a>
+				<img src="https://i.imgur.com/TkyZkDa.png" title="You">
+			</div>
+		</div>
+
+		<!-- Payment Page Main Div-->			
+		<div class="parent-container center-flex">
+			<div class="bat-meron-tape center-flex">
+				<img src="https://i.imgur.com/ChpPwKC.png">
+				<img src="https://i.imgur.com/ORrmmZ3.png">
+			</div>		
+	
+			<!-- Payment Page Banner -->
+			<div class="banner">
+				<div class="banner-texts" style="text-align: left;">
+					<label style="font-size: 45px">Delivery Address</label>
+					<label style="font-size: 25px; padding-left: 50px">• John Doe (+63) 9*********</label>
+					<label style="font-size: 25px; padding-left: 50px">• Block Lot Village Barangay  City  Province  Country Zip Code</label>
+				</div>
+			</div>
+		</div>
+		<div class="mid-container center-flex">
+			<div class="delivery payment-box center-flex">
+				<div class="cart-category pastry" id="cartPastries">
+					<h1>PASTRIES</h1>
+				</div>
+				<div class="cart-category dessert" id="cartDesserts">
+					<h1>DESSERTS</h1>
+				</div>
+				<div class="cart-category drink" id="cartDrinks">
+					<h1>DRINKS</h1>
+				</div>
+			</div>
+			<div class="receipt-box">
+				<img class="brand-200px" src="https://i.imgur.com/ChSKUzT.png">
+				<div class="receipt">
+					<label class="top-label">THANK YOU FOR YOUR ORDER</label>
+					<label class="italic-label">A message has been sent</label>
+					<div class="order-confirm center-flex">
+						<label>Order confirmation #</label>
+						<label>102345</label>						
+					</div>
+					<div class="order-list">
+
+					</div>
+					<label class="bottom-label">Now you can relax. We're working on getting your food to you ASAP!</label>
+				</div>
+			</div>
+		</div>
+		<div class="parent-container center-flex">
+			<div class="cart-data center-flex">
+				<label>Estimated Delivery Time: 02 : 00 : 00</label>
+				<label id="modePayment">Mode of Payment: </label>
+			</div>
+
+			<button class="delivery-button" onclick="backToMenu()">BACK TO MENU</button>
+		</div>
+
+		<script src="menu.js"></script>
+	</body>
+ 	<footer>
+ 		<a>Give Feedback</a>
+		<b>·</b>
+		<a>Contact Service</a>
+		<b>·</b>
+		<a>About Us</a>
+ 	</footer>
+</html>

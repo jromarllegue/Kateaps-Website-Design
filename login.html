@@ -1,153 +1,102 @@
 <!DOCTYPE html>
 <html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>KaTEAps Shop - Login</title>
+		<link rel="icon" type="image/x-icon" href="https://i.imgur.com/ChSKUzT.png">
+		<link rel="stylesheet" type="text/css" href="account.css"> </link>
 
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>KaTEAps Shop - Login</title>
-  <link rel="icon" type="image/x-icon"
-    href="https://assets.api.uizard.io/api/cdn/stream/58052032-a3fe-4421-9592-9d0ccf90aa7a.png">
-  <style>
-    body {
-      margin: 0;
-      background-size: cover;
-      background-repeat: no\2D repeat;
-      background-attachment: fixed;
-      font-family: 'Verdana';
-    }
+		<!-- JS JQuery Functions -->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+		<script>
+			$(document).ready(function() {
 
-    .header {
-      position: absolute;
-      top: 0;
-      width: 100%;
-      height: 60px;
-    }
+				$(".header-brand").click(function () {
+					window.location.href = "home.html";
 
-    .brand {
-      position: absolute;
-      display: block;
-    }
+				});
 
-    .header-options {
-      right: 0;
-      position: absolute;
-      margin-top: 14px;
-    }
+				$("button").click(function() {
+					$("button").css("transform", "scale(.8,.8)");
+				
+					setTimeout(function() {
+						$("button").css("transform", "scale(1,1)");
+						window.location.href = "categories.html";
 
-    .header-options a {
-      display: inline;
-      text-align: center;
-      padding: 20px;
-      font-size: 16px;
-      color: white;
-      border: none;
-      background: none;
-      text-decoration: none;
-    }
+					},100);
+				});
 
 
-    #welcome-text {
-      position: absolute;
-      color: white;
-      text-shadow: 2px 1px #ffff33;
-      font-size: 100px;
-      width: 50%;
-    }
+				if (!window.matchMedia("(max-width: 800px)").matches) {
+					$(".left-container p").html("Welcome <br> Back <br> Kateaps!");
 
-    .container {
-      margin: 20px 0px 0px 50%;
-      width: 50%;
-    }
+				} else {
+					$(".left-container p").html("Welcome Back Kateaps!");					
 
-    .form-container {
-      background-color: rgba(40, 40, 40, .2);
-      border-radius: 2%;
-      margin: 0px 40px 0px 40px;
-      padding: 20px;
-    }
+					$(".header-options").html("<a id='headBurger'><b>☰</b></a>");
 
-    .form-container input {
-      padding-left: 10px;
-      font-size: 15px;
-      height: 40px;
-      border: 3px solid #a1722b;
-      width: 390px;
-      margin: 20px 0px 20px 0px;
-      color: gray;
-    }
+					$("#headBurger").click(function() {
+						$(".header-options").append("<div class='header-popup center-flex'>"
+					 		+ "<a id='headHome' href='homepage.html'>HOME</a>"
+							+ "<a id='headLogin' href='login.html'>LOG IN</a>" 
+							+ "<a id='headAboutUs' href='aboutus.html'>ABOUT US</a>"
+							+ "</div>");
+					});
 
-    #loginAccount {
-      font-size: 18px;
-      height: 50px;
-      width: 240px;
-      margin-top: 30px;
-      border: none;
-      border-bottom: 4px solid #555555;
-      background-color: #67481b;
-      color: white;
-    }
+	//				$("*:not(.header-popup, #headBurger)").click( function() {
+	//					$(".header-popup").remove();
+	//				});
+				}
+			});
 
-    .form-container a {
-      font-size: 12px;
-      color: white;
-      text-decoration: none;
-    }
+		</script>
+	</head>
+	
+	<!-- Login Page Body -->
+	<body background="https://i.imgur.com/zMjmQWH.png">
+		
+		<!-- Login Page Header -->		
+		<div class="header">
+			<div class="header-brand center-flex">
+				<img src="https://i.imgur.com/ChSKUzT.png"></img>
+				<label><b>KATEAPS</b></label>
+			</div>
+			<div class="header-options center-flex">
+		 		<a href="home.html">HOME</a>
+				<a href="login.html" style="background-color:#321f01; color:white">LOG IN</a> 
+				<a href="https://asuncionmarykathar.wixsite.com/kateaps/about-us">ABOUT US</a>
+			</div>
+		</div>
 
-    .form-container a:hover {
-      text-decoration: underline;
-    }
-  </style>
-</head>
+		<!-- Login Page Main Div-->	
+		<div class="parent-container center-flex">	
 
-<body align="center" background="https://i.imgur.com/zMjmQWH.png">
-  <div class="header">
-    <img class="brand" src="https://assets.api.uizard.io/api/cdn/stream/58052032-a3fe-4421-9592-9d0ccf90aa7a.png"
-      height="61px"></img>
-    <div class="header-options">
-      <a id="headHome" href="homepage.html">HOME</a>
-      <a id="headLogin" href="login.html" style="background-color: #321f01">LOG IN</a>
-      <a id="headAboutUs" href="aboutus.html">ABOUT US</a>
-    </div>
-  </div>
-  <p id="welcome-text">
-    Welcome <br> Back <br> Kateaps!
-  </p>
-  <div class="container">
-    <img src="https://assets.api.uizard.io/api/cdn/stream/58052032-a3fe-4421-9592-9d0ccf90aa7a.png" height="200px"
-      style="padding-top: 45px"> </img><br><br><br>
+			<!-- Login Page Left Space-->	
+			<div class="left-container" style="width:50%; font-size:100px">	
+				<p></p>
+			</div>
 
-    <div class="form-container">
-      <input type="text" id="emailLogin" onclick="clearText()">
-      <input type="text" id="passwordLogin" onclick="changeType()">
-      <br>
-      <button id="loginAccount"> LOGIN </button>
-      <br>
-      <a href="signup.html">Don't have an account yet? Sign up!</a>
-    </div>
-  </div>
+			<!-- Login Page User Inputs-->	
+			<div class="right-container" style="width: 50%">
+				<img class="brand-200px" src= "https://i.imgur.com/ChSKUzT.png">			
+	
+				<div class="semi-container">
+		 			<input type="text" id="txtEmail" class="input-login" placeholder="Email or Phone Number">
+			 		<input type="text" id="txtPassword" class="input-login" placeholder="Password">
 
-  <script>
-    let emailLogin = document.getElementById("emailLogin");
-    emailLogin.value = "Email or Phone Number";
-    let passwordLogin = document.getElementById("passwordLogin");
-    passwordLogin.value = "Password";
+			 		<button id="loginAccount"> LOG IN </button>
 
-    function clearText() {
-      if (emailLogin.value == "Email or Phone Number") {
-        emailLogin.value = "";
-        emailLogin.style.color = "black";
-      }
-    }
-
-    function changeType() {
-      if (passwordLogin.type == "text") {
-        passwordLogin.type = "password";
-        passwordLogin.value = "";
-        passwordLogin.style.color = "black";
-      }
-    }
-
-  </script>
-</body>
-
+			 		<a href="signup.html"><span>Don't have an account yet? Sign up!</span></a>
+			 	</div>
+			 	<footer>
+			 		<a>Give Feedback</a>
+					<b>·</b>
+					<a>Contact Service</a>
+					<b>·</b>
+					<a>About Us</a>
+			 	</footer>
+		 	</div>
+		</div>	
+	</body>
 </html>

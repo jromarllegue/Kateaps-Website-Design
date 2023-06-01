@@ -1,0 +1,226 @@
+/*login.html, signup.html*/
+
+body {
+	margin: 0;
+	background-size: cover;
+	background-repeat: no\2D repeat;
+	background-attachment: fixed;
+}
+
+a {
+	text-decoration: none;
+}
+
+label {
+	cursor: unset;
+}
+
+button, .header-brand {
+	cursor: pointer;
+}
+
+.header {
+	position: relative;
+	height: 60px;
+	background-color: white;
+}
+
+.center-flex {
+	display: flex;
+	text-align: center;
+	align-items: center;
+	justify-content: center;
+}
+
+.header-brand, .header-options {
+	position: absolute;
+}
+
+.header-brand img {
+	margin: 5px;
+	height: 50px;
+}
+
+.header-brand label {
+	font: 25px Arial, sans-serif;
+}
+
+.header-options {
+	right: 0;
+	height: 60px;
+}
+
+.header-options a{
+	padding: 4px 16px 4px 16px;
+	margin-right: 4px;
+	color: black;
+	font: 18px Calibri;
+	transition: .5s;
+}
+
+.header-options a:hover {
+	background-color: #321f01;
+	color: white;
+}
+
+.left-container p{
+	color: white;
+	text-shadow: 2px 1px #ffff33;
+}
+
+.brand-200px {
+	margin-top: 20px;
+	width: 200px;
+	height: 200px;
+}
+
+.semi-container {
+	display: inline-block;
+	margin-top: 30px;
+	padding: 5% 10% 5% 10%;
+	width: 70%;
+	background-color: rgba(0,0,0,0.3);
+	border-radius: 2%;		
+}
+
+.semi-container label{
+	display: block;
+	margin-bottom: 20px;
+	color: white;
+	font-size: 19px;
+}
+
+.input-login {
+	margin-top: 25px;
+	padding: 12px;
+	width: 70%;
+	border: 2px solid #67481b;
+	box-shadow: 0px 0px 0px 2px white;
+}
+
+.input-signup {
+	margin: 20px;
+	padding: 0px 30px 0px 30px;
+	height: 50px;
+	color: #444444;
+	font-size: 18px;
+	border: 4px solid orange;
+	border-radius: 30px;			
+}
+
+.semi-container button {	
+	margin-top: 40px;
+	height: 46px;
+	width: 240px;
+	font-size: 20px;
+	color: white;
+	background-color: #67481b;				
+	border: 2px solid white;
+	border-radius: 4px;
+	transition: .1s;
+}
+
+.semi-container button:hover {
+	transform: scale(.9,.9);
+}
+
+.semi-container a {
+	display: block;
+	margin-top: 10px;
+	color: white;
+}
+
+.semi-container a span:hover {
+	text-decoration: underline;
+	cursor: pointer;
+}
+
+footer {
+	margin: 15px;
+	font: 11px Calibri;
+	color: #bbbbbb;
+}
+
+
+
+/* EXETENDED CSS (FOR MOBILE) */
+
+
+@media (max-width:800px) {
+	body {
+		background: unset;
+	}
+
+	.parent-container {
+		display: block;
+	}
+
+	.left-container, .right-container {
+		margin-top: 10px;
+		width: 100% !important;
+	}
+
+	.left-container p {
+		font-size: 20px;
+		color: #67481b;
+		font-weight: bold;
+		text-shadow: unset;
+	}
+
+	.semi-container {
+		margin-top: 0;
+		padding-left: unset;
+		padding-right: unset;
+		background-color: white;
+	}
+
+	.semi-container label {
+		color: black;
+		font-size: 14px;
+	}
+
+	.input-login, .semi-container button {
+		box-shadow: 0px 0px 0px 2px gray;
+	}
+
+	.input-login {
+		width: 90%;
+	}
+
+	.input-signup {
+		margin: 10px;
+		height: 40px;
+		padding: 0px 8px 0px 8px;
+		font-size: 14px;
+		border: 2px solid gray;
+	}
+
+	.semi-container button {
+		width: 180px;
+		height: 36px;
+		font-size: 14px;
+		border: none;
+	}
+
+	.header-popup {
+		position: absolute;
+		top: 3px;
+		right: 3px;
+		z-index: 500;
+		background-color: white;
+		box-shadow: 0px 0px 3px 1px rgba(0,0,0,.4);
+		flex-direction: column;
+	}
+
+	.header-popup a {
+		margin: 0px;
+		padding: 10px 0px 10px 0px;	
+		width: 90px;
+		font-size: 15px;
+	}
+
+	.header-popup a:not(.header-popup a:last-child)	{
+		border-bottom: 1px solid rgba(0,0,0,.4);
+	}
+}
+

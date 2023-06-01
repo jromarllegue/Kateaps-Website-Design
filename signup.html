@@ -3,164 +3,105 @@
 	<head>
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<title>KaTEAps Shop - Login</title>
-		<link rel="icon" type="image/x-icon" href="https://assets.api.uizard.io/api/cdn/stream/58052032-a3fe-4421-9592-9d0ccf90aa7a.png">
-		<style>
-			body {
-				margin:0;
-				background-size: cover;
-				background-repeat: no\2D repeat;
-				background-attachment: fixed;	
-	    		font-family: 'Verdana';
-    		}
+		<title>KaTEAps Shop - Sign Up</title>
+		<link rel="icon" type="image/x-icon" href="https://i.imgur.com/ChSKUzT.png">
+		<link rel="stylesheet" type="text/css" href="account.css"> </link>
 
-			.header {
-				position:absolute;
-		        top: 0;
-    	        width: 100%; 
-				height:60px;
-			}
+		<!-- JS JQuery Functions -->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+		<script>
+			$(document).ready(function() {
 
-			.brand {
-				position:absolute;
-				display:block;
-		    }
+				$(".header-brand").click(function () {
+					window.location.href = "home.html";
 
-			.header-options {
-				right:0;
-				position:absolute;
-				margin-top:14px;
-			} 
+				});
 
-			.header-options a{
-	        	display:inline;
-	        	text-align: center;
-				padding:20px;
-				font-size: 16px;
-				color:white;
-				border:none;
-				background: none;
-				text-decoration: none;
-			}
+				$("button").click(function() {
+					$("button").css("transform", "scale(.8,.8)");
+				
+					setTimeout(function() {
+						$("button").css("transform", "scale(1,1)");
+						window.location.href = "categories.html";
 
+					},100);
+				});
 
-    		#signup-welcome {
-    			position:absolute;
-  				color: white;
-  				text-shadow:2px 1px #ffff33;
-  				font-size:37px;  	
-    			width: 40%;
-    		}
+				if (window.matchMedia("(max-width: 800px)").matches) {
+					$(".header-options").html("<a id='headBurger'><b>☰</b></a>");
+					$(".brand-200px").css({"height":"75", "width":"75"});
+					$(".left-container *:not(.brand-200px)").css("display", "none");
 
-    		#copyrighted {
-    			position:fixed;
-    			top:370px;
-    			left:-60px;
-    		}
+					$("#txtFirstName, #txtLastName").attr("size", "10");
+					$("#txtEmail, #txtPassword, #txtConfPassword").attr("size", "30");
 
-			.container {
-				margin:120px 0px 0px 40%;
-				width: 60%;
-	    	}
+					$("#headBurger").click(function() {
+						$(".header-options").append("<div class='header-popup center-flex'>"
+					 		+ "<a id='headHome' href='homepage.html'>HOME</a>"
+							+ "<a id='headLogin' href='login.html'>LOG IN</a>" 
+							+ "<a id='headAboutUs' href='aboutus.html'>ABOUT US</a>"
+							+ "</div>");
+					});
 
-	    	.form-container {
-	    		background-color: rgba(40,40,40,.2); border-radius: 2%;
-	    		margin:0px 40px 0px 40px;
-	    		padding: 30px;
-	    	}
-
-	    	.form-container input{
-	    		padding-left:10px;
-				height:50px;
-				color: gray;				
-				border:2px solid orange;
-				font-size: 18px;
-			}
-
-			#firstName, #lastName {
-				width:200px;				
-				margin:20px 40px 20px 40px;
-
-			}
-
-			#emailSignup, #passwordSignup {
-				width:500px;				
-				margin:20px 0px 20px 0px;				
-			}
-
-			#createAccount {
-				font-size: 18px;
-				height:50px;
-				width:240px;
-				margin-top:30px;
-				border:none;
-				border-bottom:4px solid #555555;				
-				background-color:#67481b;				
-				color: white;
-			}
-
-			.form-container label {
-				font-size: 12px;
-				color:white; 
-			}
-		</style>
+	//				$("*:not(.header-popup, #headBurger)").click( function() {
+	//					$(".header-popup").remove();
+	//				});
+				}
+			});
+		</script>
 	</head>
-
-	<body align = "center" background="https://i.imgur.com/zMjmQWH.png">
+	
+	<!-- Signup Page Body -->
+	<body background="https://i.imgur.com/zMjmQWH.png">
+		
+		<!-- Signup Page Header -->		
 		<div class="header">
-			<img class="brand" src="https://assets.api.uizard.io/api/cdn/stream/58052032-a3fe-4421-9592-9d0ccf90aa7a.png" height="61px"></img>
-			<div class="header-options">
-		 		<a id = "headHome" href="homepage.html">HOME</a>
-				<a id = "headLogin" href="login.html">LOG IN</a>
-				<a id = "headAboutUs" href="aboutus.html">ABOUT US</a>
+			<div class="header-brand center-flex">
+				<img src="https://i.imgur.com/ChSKUzT.png"></img>
+				<label><b>KATEAPS</b></label>
+			</div>
+			<div class="header-options center-flex">
+		 		<a href="home.html">HOME</a>
+				<a href="login.html">LOG IN</a> 
+				<a href="aboutus.html">ABOUT US</a>
 			</div>
 		</div>
-		<div id="signup-welcome">		
-			<img src="https://assets.api.uizard.io/api/cdn/stream/58052032-a3fe-4421-9592-9d0ccf90aa7a.png" height="200px">
-			<p>HAVE A BREW-TEA-FULL DAY</p>
 
-			<img src="https://assets.api.uizard.io/api/cdn/stream/7cc07f4e-a3fb-4efa-88c3-dfe59a327505.png" height="500px" id="copyrighted">
-		</div>
-		<div class="container">
-			<div class="form-container">
- 				<input type = "text" id="firstName" class="userInfo" onclick="clearText()">
-	 			<input type = "text" id="lastName" class="userInfo" onclick="clearText()">
- 				<input type = "text" id="emailSignup" class="userInfo" onclick="clearText()">
-	 			<input type = "text" id="passwordSignup" onclick="changeType()">
-	 			<br>
-	 			<button id = "createAccount">SIGN UP </button>
-	 			<br>
-	 			<label>By clicking Sign up, you agree to our Terms, Privacy Policy, and Cookies Policy. You may receive SMS Notifications from us and can opt out anytime.</label>
-	 		</div>
-	 	</div>
+		<!-- Signup Page Main Div-->	
+		<div class="parent-container center-flex">	
 
-	 	<script>
-	 		let firstName = document.getElementById("firstName");
-			firstName.value = "First Name";
-			let lastName = document.getElementById("lastName");
-			lastName.value = "Last Name";
-	 		let emailSignup = document.getElementById("emailSignup");
-			emailSignup.value = "Email or Phone Number";
-			let passwordSignup = document.getElementById("passwordSignup");
-			passwordSignup.value = "Password";
+			<!-- Signup Page Left Space-->	
+			<div class="left-container" style="width:45%; font-size:40px; flex-direction: column">	
+				<img class="brand-200px" src="https://i.imgur.com/ChSKUzT.png">
+				<p>
+					HAVE A BREW-TEA-FULL DAY
+				<p>	
+				<img src="https://i.imgur.com/3kwDaLM.png" height="300px">
+			</div>
 
-			let userInfo = document.getElementByClassName("userInfo");
+			<!-- Signup Page User Inputs-->	
+			<div class="right-container" style="width:55%">
+				<div class="semi-container">
+					<label>Please fill up the following information to create an account.</label>
+		 			
+		 			<input type="text" id="txtFirstName" class="input-signup" placeholder="First Name" size="12">
+		 			<input type="text" id="txtLastName" class="input-signup" placeholder="Last Name" size="12">
+		 			<input type="text" id="txtEmail" class="input-signup" placeholder="Email or Phone Number" size="40">
+			 		<input type="text" id="txtPassword" class="input-signup" placeholder="Password" size="40">
+			 		<input type="text" id="txtConfPassword" class="input-signup" placeholder="Confirm Password" size="40">
+			 		
+			 		<br><button id="createAccount"> SIGN UP </button>
 
-	 		function clearText() {
-	 			if (userInfo.style.color == "gray") {
-	 				userInfo.value = "";
-	 				userInfo.style.color = "black";
-	 			} 	 		
-	 		}
-
-	 		function changeType() {
-	 			if (passwordSignup.type == "text") {
-	 				passwordSignup.type = "password";
-	 				passwordSignup.value = "";
-	 				passwordSignup.style.color = "black";
-	 			}
-	 		}
-
-	 	</script>
+			 		<a>By clicking Sign up, you agree to our <span>Terms of Use</span>, <span>Privacy Policy</span>, and <span>Cookies Policy</span>. You may receive SMS Notifications from us and can opt out anytime.</a>
+			 	</div>
+			 	<footer>
+			 		<a>Give Feedback</a>
+					<b>·</b>
+					<a>Contact Service</a>
+					<b>·</b>
+					<a>About Us</a>
+			 	</footer>
+		 	</div>
+		</div>	
 	</body>
-	</html>
+</html>

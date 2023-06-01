@@ -1,0 +1,591 @@
+/*categories.html, home.html, pastries.html, desserts.html, drinks.html, cart.html*/
+
+/*
+* HOME PAGE - home.html
+* SELECTION PAGES - categories.html, pastries.html, desserts.html, drinks.html
+* CATEGORY PAGE - categories.html
+* ORDERING PAGES - pastries.html, desserts.html, drinks.html
+* DELIVERY PAGES - cart.html, payment.html
+*/
+
+
+body {
+	margin: 0;
+	background-size: cover;
+	background-repeat: no\2D repeat;
+	background-attachment: fixed;
+	font-family: Arial, sans-serif;
+}
+
+a {
+	text-decoration: none;
+}
+
+label {
+	cursor: unset;
+}
+
+button, .header-brand, .item {
+	cursor: pointer;
+}
+
+.center-flex {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+
+
+/* * HEADER ALL PAGES * */
+
+.header {
+	position: relative;
+	height: 60px;
+	background-color: white;
+	border-bottom: 3px solid gray;
+}
+
+.header-brand, .header-options {
+	position: absolute;
+}
+
+.brand-img {
+	margin: 5px;
+	height: 50px;
+}
+
+.brand-label {
+	font: bold 25px Arial, sans-serif;
+}
+
+.header-options {
+	right: 16px;
+	height: 60px;
+}
+
+.header-options a{
+	padding: 4px 16px 4px 16px;
+	margin-right: 4px;
+	color: black;
+	font: 18px Calibri;
+	transition: .5s;
+}
+
+.header-options a:hover {
+	background-color: #321f01;
+	color: white;
+}
+
+.header-options img {
+	height: 40px;
+}
+
+
+
+/* * PARENT CONTAINER ALL PAGES * */
+
+.parent-container {
+	position: relative;
+	overflow-x: hidden;
+	flex-direction: column;
+}
+
+
+
+/* * HOME PAGE ONLY * */
+
+.hero-image {
+	width:1400px;
+}
+
+.tagline-box {
+	margin-top: 370px;
+	position: absolute;
+	text-align: center;
+	width: 800px;
+}
+
+.start-account {
+	margin-top: 200px;
+}
+
+.start-account a {
+	margin: 10px;
+	padding: 15px;
+	font: 20px Roboto, sans-serif;
+	transition: .4s;
+}
+
+.start-account a:first-child {
+	color: white;
+	border: 2px solid #555555;
+	border-radius: 15px;
+	background-image: linear-gradient(0deg, #1c975d,#1c975d);
+}
+
+.start-account a:first-child:hover {
+	transform: scale(1.2,1.2);
+	animation-name: animate-gradient;
+	animation-duration: .5s;
+	animation-iteration-count: 1;
+	animation-fill-mode: forwards;
+}
+
+@Keyframes animate-gradient {
+	0% {background-image: linear-gradient(45deg, #1c975d, #1c975d); border-color: #555555}
+	10% {background-image: linear-gradient(45deg, #fa9600 10%, #1c975d); border-color: #565656}
+	20% {background-image: linear-gradient(45deg, #fa9600 20%, #1c975d); border-color: #666666}
+	30% {background-image: linear-gradient(45deg, #fa9600 30%, #1c975d); border-color: #676767}
+	40% {background-image: linear-gradient(45deg, #fa9600 40%, #1c975d); border-color: #777777}
+	50% {background-image: linear-gradient(45deg, #fa9600 50%, #1c975d); border-color: #787878}
+	60% {background-image: linear-gradient(45deg, #fa9600 60%, #1c975d); border-color: #888888}
+	70% {background-image: linear-gradient(45deg, #fa9600 70%, #1c975d); border-color: #898989}
+	80% {background-image: linear-gradient(45deg, #fa9600 80%, #1c975d); border-color: #999999}
+	90% {background-image: linear-gradient(45deg, #fa9600 90%, #1c975d); border-color: #9a9a9a}
+	100% {background-image: linear-gradient(0deg, #fa9600, #fa9600); border-color: #aaaaaa}
+}
+
+.start-account a:last-child:hover {	
+	text-decoration: underline !important;
+	text-underline-offset: 6px;
+}
+
+.tagline-box label {
+	display: block;
+	color: black;
+	z-index: 99;
+}
+
+.tagline-box label::before {
+	position: absolute;
+ 	left: 0;
+	z-index: 100;
+}
+
+.tagline-box label:first-child {
+	font: bold 68px Roboto, sans-serif;
+}
+
+.tagline-box label:first-child::before {
+	content: "Quick Delivery at your Doorstep!";
+	padding-left: 10px;
+	top: 0;
+	color: #c1841d;
+}
+
+.tagline-box label:last-child {
+	font: bold 35px Roboto, sans-serif;
+}
+
+.tagline-box label:last-child::before {
+	content: "A better way to start your day. Creating and treating pastry obsession, made just for you! Have a Brew-Ti-Ful day!";
+	padding-left: 7px;
+	top: 156px;
+	color: #ff4040;
+}
+
+
+
+/* * BANNER SELECTION PAGES * */
+
+.bat-meron-tape, .banner, .page-buttons {
+	justify-content: space-between;
+	margin: 0 auto 0 auto;
+}
+
+.bat-meron-tape {
+	position: absolute;
+	top: 0;
+	width: 1380px;
+	z-index: 100;
+}
+
+.banner, .menu-items, .page-buttons {
+	width: 1300px;
+}
+
+
+.banner, .semi-banner {
+	text-align: center;
+	background-color: #67481b;
+	border: 4px solid #fa9600;
+	border-radius: 5px;	
+}
+
+.banner {
+	margin-top: 30px;
+	padding-left: 30px;
+	height: 126px;
+}
+
+.banner-texts label{
+	display: block;
+	color: white;
+	font-weight: bold;
+}
+
+
+.menu-items {
+	margin: 30px auto 50px auto;
+	flex-wrap: wrap;
+}
+
+.item, .cart-item div {
+	background-image: linear-gradient(0deg, white 75%, lightgray);
+	border: 5px lightgray solid;
+	transition: .3s;
+}
+
+.item{
+	position: relative;
+	display: inline-table;
+	margin: auto;
+	cursor: pointer;
+} 
+.item:hover, .cart-item div:hover{
+	transform: scale(1.1,1.1);
+}
+
+.item label {
+	display: block;
+	color: red;
+	font-weight: bold;
+}
+
+.item img {
+	position: absolute;
+	bottom: 0;
+}
+
+
+
+/* * CATEGORY PAGE ONLY * */
+
+.category-item {
+	width: 360px;
+	height: 360px;
+	box-shadow: 10px 10px 10px 5px rgba(0,0,0,.5); 
+}
+
+.category-item label {
+	text-align: center;
+}
+
+.category-item .item-name {
+	font-size: 38px;
+	text-decoration: underline;
+}
+
+.category-item .kira-kira {
+	font-size: 28px;
+}
+
+.category-item img {
+	width: 360px;
+}
+
+
+
+/* * ORDER ITEM ORDERING PAGES * */
+
+.order-item {
+	margin: 26px;
+	width: 240px;
+	height: 240px;
+	box-shadow: 7px 7px 7px 4px rgba(0,0,0,.5); 
+}
+
+.order-item img {
+	right: 0;
+	max-width: 170px;
+	max-height: 160px;
+}
+
+.order-item .item-name {
+	font-size: 28px;
+}
+
+.order-item .kira-kira {
+	font-size: 18px;
+}
+
+.order-item .price {
+	position: absolute;
+	bottom: 0;
+}
+
+
+
+/* * POPUP CONTAINER ALL PAGES * */
+
+.block-screen {
+	position: absolute;
+ 	height: 100%;
+ 	width: 100%;
+ 	z-index: 200;
+ 	background-color: rgba(255, 165, 0, 0.15);
+}
+
+.item-popup {
+	position: absolute;
+	display: none;
+ 	padding: 10px 30px 10px 30px;
+ 	z-index: 300;
+	border: 5px solid rgba(103,72,27,.9);
+	background-color: rgba(255,255,255,.9);
+}
+
+.x-cancel {
+	position: absolute;
+	top: 10px;
+	right: 10px;
+	font-size: 20px;
+	border: none;
+	background-color: transparent;
+}
+
+.item-popup label:not(.brand-label){
+	display: block;
+	font-size: 20px;
+}
+
+.popup-ok {	
+	margin-top: 40px;
+	padding: 5px 25px 5px 25px;
+	font: bold 18px Arial, sans-serif;
+	color: white;
+	background-color: green;
+	border: 2px solid gray;
+	border-radius: 5px;
+}
+
+
+
+/* * BOTTOM BUTTONS ALL PAGES * */
+
+.page-buttons button , .delivery-button {
+	padding: 15px 20px 15px 20px;	
+	font: bold 18px Arial, sans-serif;
+	color: white;
+	background-color: #fa9600;
+	border: 2px solid lightgray;
+	border-radius: 25px;
+	transition: .3s;
+}
+
+.page-buttons button:hover, .delivery-button:hover{
+	background-color: #1c975d;
+}
+
+
+
+/* * DELIVERY DIV DELIVERY PAGES * */
+
+.main-label {
+	margin: 10px;
+	font: bold 45px Arial, sans-serif;
+	color: gray;
+}
+
+.delivery {
+	margin: 10px;
+	align-items: unset !important;
+}
+
+.cart-box {
+	min-height: 500px;
+	width: 1200px;
+	border-top: 6px solid gray;
+}
+
+.payment-box {
+	min-height: 300px;
+	width: 800px;
+}
+
+.cart-data, .delivery {
+	margin-bottom: 50px;
+}	
+
+.delivery h1 {
+	color:red;
+}
+
+.cart-category {
+	text-align: center;
+	margin: 20px;
+}
+
+.cart-box .cart-category {
+	width: 400px;
+}
+
+.payment-box .cart-category {
+	width: 200px;
+}
+
+.cart-box .cart-item {
+	margin-bottom: 30px;
+}
+
+.payment-box .cart-item {
+	flex-direction: column;
+}
+
+.cart-item div {
+	width: 170px;
+	height:170px;
+	border: 5px lightgray solid;
+	box-shadow: 7px 7px 7px 4px rgba(0,0,0,.5); 
+}
+
+.cart-box .cart-item div{
+	margin-right: 20px;
+}
+
+.cart-item img {
+	max-width: 100%;
+	max-height: 100%;
+}
+
+.cart-item p {
+	width:170px;
+	color: red;
+	font-weight: bold;
+}
+
+.cart-data label {
+	margin: 10px 60px 10px 60px;
+	font: bold 24px Arial, sans-serif;
+	color: #67481b;
+}
+
+
+
+/* * CART PAGE ONLY * */
+
+.bottom-container {
+	text-align: center;
+}
+
+.bottom-container label {
+	display: block;
+	color: white;
+	font: bold 20px Arial, sans-serif;
+}
+
+.semi-banner {
+	margin: 30px;
+	width: 500px;
+	height: 150px;
+	padding: 10px 40px 20px 40px;
+}
+
+.mode-options {
+	margin-top: 5px;
+	justify-content: space-between;
+}
+
+.mode-options div {
+	width: 200px;
+	height: 130px;
+	background-color: gray;
+}
+
+.mode-options div:first-child {
+	border: 4px solid blue;
+}
+
+.mode-options div:last-child {
+	border:	4px solid #67481b;
+}
+
+
+
+/* * PAYMENT PAGE ONLY * */
+
+.mid-container {
+	display: flex;
+	margin-top:30px;
+	align-items: unset !important;
+}
+
+.receipt-box {
+	position: relative;
+	text-align: center;
+	width: 500px;
+}
+
+.receipt-box .brand-200px{
+	position: absolute;
+	margin: auto;
+	left: 150px;
+	height:200px;
+	z-index: 100px;
+}
+.receipt {
+	margin-top: 100px;
+	padding: 100px 0px 20px 0px;
+	background-color:#c1841d;
+
+}
+
+.receipt label:not(.order-confirm label, .order-list label) {
+	display: block;
+	color: white;
+}
+
+.top-label {
+	font: bold 28px Arial, sans-serif;
+}
+
+.italic-label {
+	font-size: 26px;
+	font-style: italic;
+}
+
+.order-confirm, .listed {
+	justify-content: space-between;
+
+}
+
+.order-confirm label, .listed label {
+	margin: 5px 10px 5px 10px;
+	font: bold 18px Calibri, sans-serif;
+}
+.order-confirm {
+	background-color: #eeeeee;
+	border: 5px lightgray solid;
+}
+
+.order-list {
+	margin: 5px;
+	background-color: white;
+}
+
+.listed:last-child {
+	margin: 5px;
+	border-top: 2px gray solid;
+}
+
+.listed:last-child label {	
+	font: bold 24px Calibri, sans-serif;
+}
+
+.bottom-label {
+	margin: 10px;
+ 	font: bold 18px Sriracha, cursive;
+ 	font-style: italic;
+}
+
+
+
+/* * FOOTER ALL PAGES * */
+
+footer {
+	margin: 20px;
+	font: 12px Calibri;
+	color: #bbbbbb;
+	text-align: right;
+}
